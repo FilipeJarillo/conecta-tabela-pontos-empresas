@@ -30,6 +30,7 @@ body{background:var(--branco);color:var(--quase-preto);margin:0}
 
 /* Períodos */
 #ce-pe .ce-periodos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+#ce-pe .ce-periodos.um{grid-template-columns:minmax(0,520px)}
 #ce-pe .ce-periodo{position:relative;border:1.5px solid var(--linha);border-radius:18px;padding:14px 18px;background:var(--branco)}
 #ce-pe .ce-periodo .rot{font-family:var(--font-titulos);font-weight:700;font-size:17px;color:var(--quase-preto)}
 #ce-pe .ce-periodo .dt{font-size:14px;color:var(--texto-apoio)}
@@ -88,57 +89,57 @@ body{background:var(--branco);color:var(--quase-preto);margin:0}
   #ce-pe td.num{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:8px 12px;border-radius:12px;border:1px solid var(--linha);font-size:18px}
   #ce-pe td.num.atual{border-color:var(--verde-linha)}
   #ce-pe td.num .un{display:none}
+  #ce-pe table.um td.num{grid-column:1 / -1}
   #ce-pe .ce-rot{display:block;font-family:var(--font-texto);font-weight:400;font-size:12.16px;color:var(--texto-apoio)}
   #ce-pe td.num.atual .ce-rot{color:var(--verde-texto)}
 }
 </style>
 
 <section id="ce-pe" aria-label="Tabela de pontuação do Portal Samsung Empresas">
-  <div class="ce-periodos">
-    <div class="ce-periodo" data-p="bf"><p class="rot">Black Friday</p><p class="dt">24 a 30/11</p><span class="selo" hidden>Valendo agora</span></div>
-    <div class="ce-periodo" data-p="dez"><p class="rot">Dezembro</p><p class="dt">1 a 31/12</p><span class="selo" hidden>Valendo agora</span></div>
+  <div class="ce-periodos um">
+    <div class="ce-periodo" data-p="bf" data-ini="20261124" data-fim="20261130" data-ini-txt="24/11"><p class="rot">Black Friday</p><p class="dt">24 a 30/11</p><span class="selo" hidden></span></div>
   </div>
 
   <div class="ce-tabela-wrap">
-    <table>
+    <table class="um">
       <thead><tr>
         <th scope="col">Modelo</th>
         <th scope="col" class="num" data-p="bf">Black Friday<span class="sub">24 a 30/11</span></th>
-        <th scope="col" class="num" data-p="dez">Dezembro<span class="sub">1 a 31/12</span></th>
       </tr></thead>
-      <tbody><tr class="ce-grupo"><td colspan="3">Linha Galaxy S</td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy S FE</span><span class="var">Galaxy S25 FE · Galaxy S26 FE</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>25<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>40<span class="un">pts</span></td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy S</span><span class="var">Galaxy S25 · Galaxy S26</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>35<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>55<span class="un">pts</span></td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy S+</span><span class="var">Galaxy S25+ · Galaxy S26+</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>40<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>65<span class="un">pts</span></td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy S Ultra</span><span class="var">Galaxy S25 Ultra · Galaxy S26 Ultra</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>50<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>80<span class="un">pts</span></td></tr>
-<tr class="ce-grupo"><td colspan="3">Linha Galaxy Z</td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy Z Flip</span><span class="var">Galaxy Z Flip7 · Galaxy Z Flip8</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>50<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>80<span class="un">pts</span></td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy Z Fold</span><span class="var">Galaxy Z Fold7 · Galaxy Z Fold8</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>75<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>125<span class="un">pts</span></td></tr>
-<tr><td class="modelo"><span class="faixa">Galaxy Z Fold Ultra</span><span class="var">Galaxy Z Fold8 Ultra</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>85<span class="un">pts</span></td><td class="num" data-p="dez"><span class="ce-rot">Dezembro</span>145<span class="un">pts</span></td></tr></tbody>
+      <tbody><tr class="ce-grupo"><td colspan="2">Linha Galaxy S</td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy S FE</span><span class="var">Galaxy S25 FE · Galaxy S26 FE</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>25<span class="un">pts</span></td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy S</span><span class="var">Galaxy S25 · Galaxy S26</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>35<span class="un">pts</span></td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy S+</span><span class="var">Galaxy S25+ · Galaxy S26+</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>40<span class="un">pts</span></td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy S Ultra</span><span class="var">Galaxy S25 Ultra · Galaxy S26 Ultra</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>50<span class="un">pts</span></td></tr>
+<tr class="ce-grupo"><td colspan="2">Linha Galaxy Z</td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy Z Flip</span><span class="var">Galaxy Z Flip7 · Galaxy Z Flip8</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>50<span class="un">pts</span></td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy Z Fold</span><span class="var">Galaxy Z Fold7 · Galaxy Z Fold8</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>75<span class="un">pts</span></td></tr>
+<tr><td class="modelo"><span class="faixa">Galaxy Z Fold Ultra</span><span class="var">Galaxy Z Fold8 Ultra</span></td><td class="num" data-p="bf"><span class="ce-rot">Black Friday</span>85<span class="un">pts</span></td></tr></tbody>
     </table>
   </div>
 
   <div class="ce-regras">
-    <div class="ce-card"><h3>Como pontua</h3><p>Cada aparelho vendido e faturado pelo <b>Portal Samsung Empresas</b> entre 24/11 e 31/12 vale os pontos da tabela, conforme a data do pedido. <b>1 ponto = R$ 1</b> em prêmios.</p></div>
+    <div class="ce-card"><h3>Como pontua</h3><p>Cada aparelho vendido e faturado pelo <b>Portal Samsung Empresas</b> entre 24 e 30/11 vale os pontos da tabela, conforme a data do pedido. <b>1 ponto = R$ 1</b> em prêmios.</p></div>
     <div class="ce-card"><h3>Treinamentos</h3><p><b>5 treinamentos</b> de 20 pontos cada, até <b>100 pontos</b> por pessoa.</p></div>
     <div class="ce-card"><h3>Supervisores</h3><p>Recebem <b>5%</b> dos pontos de venda da sua equipe.</p></div>
   </div>
 
-  <p class="ce-nota">Valem todas as variantes de cada modelo. <b>Fora da campanha:</b> linha Galaxy A, XCover e tablets. Os pontos são creditados em até 10 dias após a validação do relatório semanal enviado pelos supervisores. Pedidos feitos depois de 31/12 não pontuam.</p>
+  <p class="ce-nota">Valem todas as variantes de cada modelo. <b>Fora da campanha:</b> linha Galaxy A, XCover e tablets. Os pontos são creditados em até 10 dias após a validação do relatório semanal enviado pelos supervisores. Pedidos feitos depois de 31/12 não pontuam. A tabela de dezembro será publicada em 1º/12.</p>
 </section>
 
 <script>
 (function(){
   var root=document.getElementById('ce-pe'); if(!root) return;
-  /* Período vigente pela data local: até 30/11 = Black Friday; de 1/12 a 31/12 = Dezembro */
+  /* Período vigente pela data local (AAAAMMDD nos data-ini/data-fim). Com um período só, ele fica sempre em destaque. */
   var hoje=new Date(), ymd=hoje.getFullYear()*10000+(hoje.getMonth()+1)*100+hoje.getDate();
-  var atual = ymd<20261124 ? 'bf' : ymd<=20261130 ? 'bf' : ymd<=20261231 ? 'dez' : '';
-  var antes = ymd<20261124;
-  if(atual){
-    [].forEach.call(root.querySelectorAll('[data-p="'+atual+'"]'),function(el){el.classList.add('atual');});
-    var selo=root.querySelector('.ce-periodo[data-p="'+atual+'"] .selo');
-    if(selo){selo.textContent=antes?'Começa em 24/11':'Valendo agora'; selo.hidden=false;}
-  }
+  var cards=[].slice.call(root.querySelectorAll('.ce-periodo'));
+  cards.forEach(function(c){
+    var ini=+c.dataset.ini, fim=+c.dataset.fim, selo=c.querySelector('.selo');
+    var vigente=ymd>=ini&&ymd<=fim, futuro=ymd<ini;
+    if(vigente||cards.length===1){[].forEach.call(root.querySelectorAll('[data-p="'+c.dataset.p+'"]'),function(el){el.classList.add('atual');});}
+    if(vigente){selo.textContent='Valendo agora'; selo.hidden=false;}
+    else if(futuro){selo.textContent='Começa em '+c.dataset.iniTxt; selo.hidden=false;}
+  });
 
   var ultima=0;
   function enviarAltura(){
